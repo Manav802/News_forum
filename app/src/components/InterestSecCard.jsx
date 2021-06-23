@@ -1,29 +1,72 @@
 import React from 'react';
 
-function InterestSecCard() {
+function InterestSecCard({data}) {
   return (
-    <div className="col-sm-4">
-      <div className="interestseccard card ">
+      
+    <div className="col-sm-4 ">
+     <div className="interestseccard card ">
+
+      <div className="sqrcards">
         <img
           className="card-img-top"
           width="200px"
           height="200px"
-          src="https://picsum.photos/200/200"
-          alt="picsum"
+          src={
+              data.urlToImage !== null
+                ? data.urlToImage
+                : 'https://ak4.picdn.net/shutterstock/videos/14402014/thumb/1.jpg'
+            } 
         ></img>
         <div className="card-header">
-          <h4 className="text-color-light">Card-title</h4>
+          <h4 className=" text-color-light" >{data.title.slice(0, 30) + '. . .'}</h4>
         </div>
-        <div className="card-body text-light">
-          <p className="card-text">Lorem ipsum lorem ipsum lorem ipsum lorem</p>
-          <p className=" text-right ">
-              <a className="linkstyle" href="/">
+        <div className="card-body ">
+        <p className="cardtext content-color">
+              {data.content !== null
+                ?data.content.slice(0, 100) + '. . .'
+                : 'Click below to read about it.'}
+            </p>
+
+            <p className=" text-right ">
+              <a className="linkstyle" href={data.url}>
                 Read more...
               </a>
           </p>
         </div>
+        </div>
       </div>
     </div>
+    
   );
+
+// function InterestSecCard({ data }) {
+//   return (
+//     <div className="col-sm-4">
+//       <div className="interestseccard card ">
+//         <img
+//          className="card-img  "
+//             width="100%"
+//             height="100%"
+//             src={
+//               data.urlToImage !== null
+//                 ? data.urlToImage
+//                 : 'https://ak4.picdn.net/shutterstock/videos/14402014/thumb/1.jpg'}
+//         ></img>
+//         <div className="card-header">
+//           <h4 className="text-color-light">{data.title + '. . .'}</h4>
+//         </div>
+//         <div className="card-body text-light">
+//           <p className="card-text">{data.content !== null
+//                 ? data.content + '. . .'
+//                 : 'Click below to read about it.'}</p>
+//                 <p className=" text-right ">
+//               <a className="linkstyle" href={data.url}>
+//                 Read more...
+//               </a>
+//             </p>
+//         </div>
+//       </div>
+//     </div>
+//   );
 }
 export default InterestSecCard;

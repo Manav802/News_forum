@@ -1,12 +1,10 @@
 import React from "react";
-import InterestSecCard from "./InterestSecCard";
+import InterestCards from "./InterestCards";
 function InterestSection() {
   return (
     <div className="interests-section">
       <div className="row">
-        <InterestSecCard />
-        <InterestSecCard />
-        <InterestSecCard />
+        <InterestCards />
         
       </div>
     </div>

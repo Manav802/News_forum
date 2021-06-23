@@ -23,9 +23,9 @@ function Header() {
               <input />
             </div>
             <div className="d-flex justify-content-evenly menu">
-              <a className="linkstyle" href="#">Home</a>
-              <a className="linkstyle" href="#">Home</a>
-              <a className="linkstyle" href="#">Home</a>
+            
+              <a className="linkstyle" href="/">Home</a>
+          
             </div>
           </div>
         </div>
