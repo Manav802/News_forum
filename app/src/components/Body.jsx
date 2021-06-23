@@ -6,8 +6,9 @@ import Drawer from './Drawer';
 function Body() {
   return (
     <>
-      <Drawer />
+      
       <div className="container-fluid">
+      <Drawer />
         <div className="row">
           <div className="col-sm-9">
             <InterestSection />
@@ -21,3 +22,4 @@ function Body() {
   );
 }
 export default Body;
+

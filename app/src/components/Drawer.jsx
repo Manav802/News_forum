@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Justify } from 'react-bootstrap-icons';
+
+
 function Drawer() {
   const [navToggle, setNavToggle] = useState(false);
   const toggleNav = () => {
@@ -44,10 +46,10 @@ function Drawer() {
             variants={variants}
           >
             <motion.h2 className="closebtn" onClick={toggleNav}>&times;</motion.h2>
-            <motion.h3 variants={item}><a href="#">About</a></motion.h3>
-            <motion.h3 variants={item}><a href="#">Services</a></motion.h3>
-            <motion.h3 variants={item}><a href="#">Clients</a></motion.h3>
-            <motion.h3 variants={item}><a href="#">Contact</a></motion.h3>
+            <motion.h3 variants={item}><a href="/worldNews"> WORLD NEWS  </a></motion.h3>
+            <motion.h3 variants={item}><a href="/business">BUSINESS</a></motion.h3>
+            <motion.h3 variants={item}><a href="/technology">TECHNOLOGY</a></motion.h3>
+            <motion.h3 variants={item}><a href="/sports">SPORTS</a></motion.h3>
           </motion.div >
           <motion.div variants={overlay} initial="hidden"
             animate="visible" className="overlay" onClick={toggleNav}></motion.div></>}
