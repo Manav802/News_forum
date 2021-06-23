@@ -7,7 +7,7 @@ import InterestSecCard from './InterestSecCard';
 function InterestCards() {
 
   var url =
-    'http://newsapi.org/v2/top-headlines?country=in&apiKey=5ba33b83af9d4febab7e05a05f983793';
+    'https://newsapi.org/v2/everything?q=bitcoin&apiKey=5ba33b83af9d4febab7e05a05f983793';
   var req = new Request(url);
   const [item, setItem] = useState({});
   useEffect(() => {
@@ -21,10 +21,16 @@ function InterestCards() {
 
   console.log(news);
   return (
-    <div className= "row card-group">
+    <div className="container-fluid">
+    <div className="page">
+ 
+      <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-2">
+
       {news
         ? news.map((news) => <InterestSecCard data={news} key={news.url} />)
         : 'loading'}
+    </div>
+    </div>
     </div>
   );
 }

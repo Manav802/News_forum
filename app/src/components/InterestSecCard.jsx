@@ -18,7 +18,7 @@ function InterestSecCard({data}) {
             } 
         ></img>
         <div className="card-header">
-          <h4 className=" text-color-light" >{data.title.slice(0, 30) + '. . .'}</h4>
+          <h6 className=" text-color-light" >{data.title.slice(0, 100) + '. . .'}</h6>
         </div>
         <div className="card-body ">
         <p className="cardtext content-color">
